@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petika Documentation — Customization &amp; Developer Manual</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  
+  <style>
+    :root {
+      --primary: #F59E0B;
+      --primary-hover: #D97706;
+      --dark-bg: #0A0D14;
+      --card-bg: #111726;
+      --surface-elevated: #182032;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --text-muted: #94A3B8;
+    }
+    body {
+      background-color: var(--dark-bg);
+      color: #E2E8F0;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.65;
+    }
+    h1, h2, h3, h4, h5 {
+      font-family: 'Syne', sans-serif;
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+    .doc-sidebar {
+      position: sticky;
+      top: 24px;
+      height: calc(100vh - 48px);
+      overflow-y: auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .doc-nav-link {
+      display: block;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      margin-bottom: 2px;
+    }
+    .doc-nav-link:hover, .doc-nav-link.active {
+      color: #FFFFFF;
+      background-color: rgba(245, 158, 11, 0.15);
+      color: var(--primary);
+    }
+    .doc-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+    .code-block {
+      background: #06080D;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: #38BDF8;
+      overflow-x: auto;
+      margin: 16px 0;
+    }
+    .badge-amber {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--primary);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .table-dark-custom {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+    }
+    .table-dark-custom th, .table-dark-custom td {
+      border: 1px solid var(--border-color);
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+    .table-dark-custom th {
+      background: var(--surface-elevated);
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="py-4">
+
+  <div class="container-xxl">
+    <div class="row g-4">
+      
+      <!-- Sticky Sidebar Navigation -->
+      <div class="col-lg-3">
+        <aside class="doc-sidebar">
+          <div class="d-flex align-items-center gap-2 mb-4 pb-3 border-bottom border-secondary border-opacity-10">
+            <h4 class="h5 mb-0 text-white">PETIKA<span style="color: var(--primary)">.</span></h4>
+            <span class="badge-amber">v1.0.0</span>
+          </div>
+          <nav>
+            <a href="#overview" class="doc-nav-link active">1. Overview &amp; Features</a>
+            <a href="#structure" class="doc-nav-link">2. Folder Structure</a>
+            <a href="#quickstart" class="doc-nav-link">3. Quick Start Guide</a>
+            <a href="#themes" class="doc-nav-link">4. Dual Theme &amp; Colors</a>
+            <a href="#casestudies" class="doc-nav-link">5. Case Study Modal</a>
+            <a href="#contact" class="doc-nav-link">6. Contact Form Setup</a>
+            <a href="#typography" class="doc-nav-link">7. Fonts &amp; Typography</a>
+            <a href="#deployment" class="doc-nav-link">8. Deployment Guide</a>
+            <a href="#support" class="doc-nav-link">9. Support &amp; Credits</a>
+          </nav>
+        </aside>
+      </div>
+
+      <!-- Main Documentation Body -->
+      <div class="col-lg-9">
+        <main>
+          
+          <!-- 1. Overview -->
+          <section id="overview" class="doc-card">
+            <h2>1. Overview &amp; Features</h2>
+            <p>Welcome to <strong>Petika</strong>, an elite commercial single page portfolio website template designed for Senior Product Designers, Creative Technologists, Design Engineers, and Digital Consultants.</p>
+            <p>Petika combines a <strong>Neo-Editorial Bento Grid</strong> aesthetic with zero-dependency Vanilla JavaScript (ES6+) and Bootstrap 5.3.3. It operates straight out of the box with zero build step required.</p>
+            
+            <h4 class="h6 text-uppercase text-muted mt-4">Key Architecture Highlights</h4>
+            <ul>
+              <li><strong>Zero-FOUT Dual Theme Engine</strong>: Instant dark and light mode toggle with pre-render persistence in <code>localStorage</code>.</li>
+              <li><strong>In-Page Case Study Modals</strong>: Deep challenge/solution breakdowns without leaving the single-page flow.</li>
+              <li><strong>Pure Vanilla JS Category Filter</strong>: Fluid category tab switching for projects with zero jQuery.</li>
+              <li><strong>Live Availability Pulse</strong>: Animated indicator communicating availability status and timezone.</li>
+              <li><strong>100% WCAG 2.1 AA Compliant</strong>: Fully accessible contrast ratios, visible focus indicators, and screen reader skip links.</li>
+            </ul>
+          </section>
+
+          <!-- 2. Folder Structure -->
+          <section id="structure" class="doc-card">
+            <h2>2. Folder Structure</h2>
+            <p>The Petika package is cleanly organized for intuitive customization:</p>
+            <div class="code-block">
+Petika/
+├── HTML/                  : Production HTML files &amp; assets
+│   ├── index.html         : Main single page portfolio document
+│   ├── 404.html           : Custom 404 error page
+│   └── assets/            : Local styles, scripts, and vector images
+│       ├── css/           : bootstrap.min.css &amp; style.css
+│       ├── js/            : bootstrap.bundle.min.js &amp; main.js
+│       └── images/        : logo/, projects/, avatar/
+├── assets/                : Root copy of assets for flexible hosting setups
+├── documentation/         : Standalone HTML manual (index.html)
+├── licensing/             : LICENSE.txt &amp; THIRD-PARTY-LICENSES.txt
+├── README.txt             : Quick start reference guide
+├── CHANGELOG.txt          : Release notes and version history
+└── SUPPORT.txt            : Support policy and contact details
+            </div>
+          </section>
+
+          <!-- 3. Quick Start -->
+          <section id="quickstart" class="doc-card">
+            <h2>3. Quick Start Guide</h2>
+            <p>Petika requires <strong>zero npm dependencies, zero build steps, and zero compilers</strong>.</p>
+            <ol>
+              <li>Unzip the package archive.</li>
+              <li>Navigate to the <code>HTML/</code> directory.</li>
+              <li>Open <code>index.html</code> in any web browser (Chrome, Firefox, Safari, Edge).</li>
+              <li>To customize, open <code>index.html</code> and <code>assets/css/style.css</code> in your preferred editor (VS Code, Sublime, etc.).</li>
+            </ol>
+          </section>
+
+          <!-- 4. Dual Theme & Rebranding -->
+          <section id="themes" class="doc-card">
+            <h2>4. Dual Theme &amp; 60-Second Color Customization</h2>
+            <p>Petika utilizes a 3-tier CSS custom property token architecture in <code>assets/css/style.css</code>. To rebrand the template with your own signature color, simply modify the accent tokens in the <code>:root</code> block:</p>
+            <div class="code-block">
+/* In assets/css/style.css */
+:root {
+  /* Change Dark Mode Primary Accent */
+  --amber-500: #F59E0B; /* Replace with your primary HEX color */
+
+  /* Change Light Mode Primary Accent */
+  --amber-600: #D97706; /* Replace with your light-mode primary HEX color */
+}
+            </div>
+            <p>Updating these two variables automatically recalibrates all button backgrounds, borders, hover states, and badges across the entire template.</p>
+          </section>
+
+          <!-- 5. Case Study Modal -->
+          <section id="casestudies" class="doc-card">
+            <h2>5. Setting Up Case Studies in the Interactive Modal</h2>
+            <p>Projects are rendered as Bento cards in <code>index.html</code>. Each card contains <code>data-project-*</code> attributes that automatically populate the in-page modal when clicked:</p>
+            <div class="code-block">
+&lt;div class="bento-card project-card js-open-project-modal"
+     data-project-title="NovaPay — Enterprise Fintech Design System"
+     data-project-category="Product Design &amp; Systems"
+     data-project-client="FinScale Scale-Up"
+     data-project-year="2025"
+     data-project-desc="Your case study summary..."
+     data-project-challenge="The core design bottlenecks..."
+     data-project-solution="How you solved the problem..."
+     data-project-tags="Figma,Design Tokens,Bootstrap 5"
+     data-project-metrics="+34% Dev Velocity:Speed|+450 Components:Tokens"
+     data-project-image="assets/images/projects/project-1-novapay.svg"
+     data-project-link="https://yourdemolink.com"&gt;
+  ...
+&lt;/div&gt;
+            </div>
+          </section>
+
+          <!-- 6. Contact Form -->
+          <section id="contact" class="doc-card">
+            <h2>6. Contact Form Setup</h2>
+            <p>The contact form in <code>index.html</code> includes real-time client-side validation and simulated submission handling in <code>assets/js/main.js</code>.</p>
+            <p>To connect the form to a live email service (such as Formspree, Formkeep, or your own server API):</p>
+            <div class="code-block">
+&lt;!-- Example Formspree Integration --&gt;
+&lt;form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"&gt;
+  ...
+&lt;/form&gt;
+            </div>
+          </section>
+
+          <!-- 7. Typography -->
+          <section id="typography" class="doc-card">
+            <h2>7. Fonts &amp; Typography</h2>
+            <p>Petika uses three curated Google Fonts under the SIL Open Font License:</p>
+            <table class="table-dark-custom">
+              <thead>
+                <tr>
+                  <th>Role</th>
+                  <th>Font Family</th>
+                  <th>Weights Used</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Headings / Display</td>
+                  <td><code>Syne</code> (or <code>Plus Jakarta Sans</code>)</td>
+                  <td>700, 800</td>
+                </tr>
+                <tr>
+                  <td>Body &amp; Interface</td>
+                  <td><code>Inter</code></td>
+                  <td>400, 500, 600</td>
+                </tr>
+                <tr>
+                  <td>Code, Tags &amp; Metrics</td>
+                  <td><code>JetBrains Mono</code></td>
+                  <td>500, 600, 700</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <!-- 8. Deployment -->
+          <section id="deployment" class="doc-card">
+            <h2>8. Deployment Guide</h2>
+            <p>Because Petika is 100% static HTML5, you can deploy it for free on any modern hosting provider:</p>
+            <ul>
+              <li><strong>Vercel</strong>: Drag and drop the <code>HTML/</code> folder into the Vercel dashboard.</li>
+              <li><strong>Netlify</strong>: Drag and drop the <code>HTML/</code> folder onto the Netlify Drop app.</li>
+              <li><strong>GitHub Pages</strong>: Push the <code>HTML/</code> contents to a <code>gh-pages</code> branch.</li>
+              <li><strong>Apache / Nginx</strong>: Upload the <code>HTML/</code> directory to your <code>/var/www/html/</code> or <code>public_html/</code> folder.</li>
+            </ul>
+          </section>
+
+          <!-- 9. Support & Credits -->
+          <section id="support" class="doc-card">
+            <h2>9. Support &amp; Credits</h2>
+            <p>Need assistance or have questions regarding customization? Our team is happy to help:</p>
+            <ul>
+              <li><strong>Support Email</strong>: <a href="mailto:support@kdthemes.com">support@kdthemes.com</a></li>
+              <li><strong>Response Window</strong>: Within 12 to 24 business hours</li>
+            </ul>
+            <p class="text-muted small mt-4 mb-0">&copy; 2026 KD Themes. All rights reserved.</p>
+          </section>
+
+        </main>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

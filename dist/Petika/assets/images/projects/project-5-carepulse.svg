@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <defs>
+    <linearGradient id="p5bg" x1="0" y1="0" x2="600" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#0A0D14"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#p5bg)"/>
+  <rect x="40" y="30" width="520" height="340" rx="12" fill="#0A0D14" stroke="rgba(99, 102, 241, 0.25)" stroke-width="1.5"/>
+  <rect x="40" y="30" width="520" height="40" rx="12" fill="#111726"/>
+  <circle cx="65" cy="50" r="5" fill="#EF4444"/>
+  <circle cx="82" cy="50" r="5" fill="#F59E0B"/>
+  <circle cx="99" cy="50" r="5" fill="#10B981"/>
+  <text x="125" y="55" font-family="'JetBrains Mono', monospace" font-size="12" fill="#818CF8">carepulse-clinical.health / portal</text>
+
+  <!-- Clinical Dashboard Grid -->
+  <rect x="65" y="90" width="140" height="250" rx="10" fill="#111726" stroke="rgba(255, 255, 255, 0.08)"/>
+  <text x="80" y="120" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">PATIENT VITALS</text>
+  <!-- Heart Beat Waveform -->
+  <path d="M75 160L95 160L105 140L115 180L125 150L135 165L145 160L185 160" stroke="#EF4444" stroke-width="2" fill="none"/>
+  <text x="80" y="200" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="18" fill="#F8FAFC">72 BPM</text>
+  <text x="80" y="220" font-family="'Inter', sans-serif" font-size="10" fill="#10B981">Normal Rhythm</text>
+  <text x="80" y="270" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">OXYGEN SAT</text>
+  <text x="80" y="295" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="18" fill="#F8FAFC">98.5%</text>
+
+  <rect x="225" y="90" width="310" height="150" rx="10" fill="#111726" stroke="rgba(255, 255, 255, 0.08)"/>
+  <text x="245" y="120" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">CLINICAL EHR INTERACTION SYSTEM</text>
+  <text x="245" y="150" font-family="'Syne', sans-serif" font-weight="700" font-size="18" fill="#F8FAFC">Zero Medical Record Entry Errors</text>
+  <text x="245" y="175" font-family="'Inter', sans-serif" font-size="12" fill="#94A3B8">Reduced clinician daily documentation burden by 42 minutes per physician.</text>
+  <rect x="245" y="195" width="110" height="28" rx="14" fill="rgba(16, 185, 129, 0.15)"/>
+  <text x="260" y="214" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#10B981">HIPAA Compliant</text>
+
+  <rect x="225" y="255" width="310" height="85" rx="10" fill="#111726" stroke="rgba(255, 255, 255, 0.08)"/>
+  <text x="245" y="285" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">USABILITY SCORE</text>
+  <text x="245" y="315" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="20" fill="#F59E0B">99.8% (SUS Benchmark)</text>
+</svg>

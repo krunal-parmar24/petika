@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Petika — Single Page Portfolio &amp; Case Study Showcase</title>
+  <meta name="description" content="Petika is an elite single page portfolio website template designed with dark &amp; light theme, bento grid layout, and interactive case study modals for creative technologists and product designers.">
+  <meta name="keywords" content="portfolio, single page portfolio, bento grid, dark theme, light theme, product designer, creative technologist, bootstrap 5, vanilla js">
+  <meta name="author" content="KD Themes">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Petika — Single Page Portfolio &amp; Case Study Showcase">
+  <meta property="og:description" content="Contemporary single-page portfolio with fluid dark &amp; light themes, bento architecture, and in-page case study modals.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/avatar/designer-portrait.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+
+  <!-- Inline Pre-Render Theme Script (Zero-FOUT Engine) -->
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('petika-theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', initialTheme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Google Fonts: Syne (Display), Inter (Body), JetBrains Mono (Code/Metrics) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Skip to Main Content Landmark for Screen Readers -->
+  <a href="#main-content" class="visually-hidden-focusable p-3 bg-primary text-dark position-absolute top-0 start-0 z-3">Skip to main content</a>
+
+  <!-- ==========================================================================
+       Global Sticky Glass Navigation
+       ========================================================================== -->
+  <header class="petika-navbar" id="site-header">
+    <div class="container-xxl">
+      <div class="d-flex align-items-center justify-content-between">
+        
+        <!-- Brand Wordmark & Availability Pill -->
+        <div class="navbar-brand-wrap">
+          <a href="#hero" class="d-inline-flex align-items-center" aria-label="Petika Home">
+            <img src="assets/images/logo/logo-dark.svg" alt="Petika Logo" class="logo-img-dark">
+            <img src="assets/images/logo/logo-light.svg" alt="Petika Logo" class="logo-img-light">
+          </a>
+          <div class="status-beacon-pill d-none d-sm-inline-flex">
+            <span class="beacon-dot" aria-hidden="true"></span>
+            <span>AVAILABLE FOR WORK</span>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation Links (Scroll-Spy) -->
+        <nav class="petika-nav-desktop d-none d-lg-block" aria-label="Primary Navigation">
+          <ul class="petika-nav-list">
+            <li><a href="#hero" class="petika-nav-link active">Home</a></li>
+            <li><a href="#about" class="petika-nav-link">About</a></li>
+            <li><a href="#portfolio" class="petika-nav-link">Work</a></li>
+            <li><a href="#experience" class="petika-nav-link">Experience</a></li>
+            <li><a href="#skills" class="petika-nav-link">Skills</a></li>
+            <li><a href="#testimonials" class="petika-nav-link">Reviews</a></li>
+            <li><a href="#contact" class="petika-nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Header Action Group -->
+        <div class="d-flex align-items-center gap-2 gap-sm-3">
+          <!-- Dark / Light Theme Toggle -->
+          <button type="button" class="theme-toggle-btn js-theme-toggle" aria-label="Toggle theme">
+            <!-- Sun Icon (Visible in Dark Mode) -->
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon Icon (Visible in Light Mode) -->
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- Primary Hire CTA Button -->
+          <a href="#contact" class="btn-petika-primary d-none d-sm-inline-flex">
+            <span>Hire Me</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+
+          <!-- Mobile Hamburger Drawer Button -->
+          <button class="btn-petika-outline d-lg-none p-2 px-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavDrawer" aria-controls="mobileNavDrawer" aria-label="Open Mobile Menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Navigation Drawer -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNavDrawer" aria-labelledby="mobileNavDrawerLabel">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-10 p-3 p-sm-4 d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-2">
+        <h5 class="offcanvas-title font-display mb-0" id="mobileNavDrawerLabel">PETIKA.</h5>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" class="theme-toggle-btn js-theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="offcanvas-body p-4 d-flex flex-column justify-content-between">
+      <ul class="nav flex-column gap-3 fs-5">
+        <li class="nav-item"><a href="#hero" class="nav-link text-body px-0" data-bs-dismiss="offcanvas">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link text-body px-0" data-bs-dismiss="offcanvas">About</a></li>
+        <li class="nav-item"><a href="#portfolio" class="nav-link text-body px-0" data-bs-dismiss="offcanvas">Work</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link text-body px-0" data-bs-dismiss="offcanvas">Experience</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link text-body px-0" data-bs-dismiss="offcanvas">Skills</a></li>
+        <li class="nav-item"><a href="#testimonials" class="nav-link text-body px-0" data-bs-dismiss="offcanvas">Reviews</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link text-body px-0" data-bs-dismiss="offcanvas">Contact</a></li>
+      </ul>
+      <div class="pt-4 border-top border-secondary border-opacity-10">
+        <a href="#contact" class="btn-petika-primary w-100 justify-content-center" data-bs-dismiss="offcanvas">
+          <span>Start a Project</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Main Content Landmark
+       ========================================================================== -->
+  <main id="main-content">
+
+    <!-- ========================================================================
+         Section 1: Bento Hero Section
+         ======================================================================== -->
+    <section id="hero" class="section-hero">
+      <div class="container-xxl">
+        <div class="row g-4">
+          
+          <!-- Bento Intro Card (Col 8) -->
+          <div class="col-lg-8">
+            <div class="bento-card d-flex flex-column justify-content-between">
+              <div>
+                <div class="status-beacon-pill mb-3">
+                  <span class="beacon-dot" aria-hidden="true"></span>
+                  <span class="d-none d-sm-inline">AVAILABLE FOR SELECTED Q1/Q2 ENGAGEMENTS</span>
+                  <span class="d-sm-none">AVAILABLE FOR PROJECTS</span>
+                </div>
+                <h1 class="display-heading mb-4">
+                  Crafting High-Conversion Products, Design Systems &amp; Digital Experiences.
+                </h1>
+                <p class="fs-5 text-secondary-subtle mb-4" style="max-width: 680px;">
+                  I'm Petika — Senior Product Designer &amp; Creative Technologist based in San Francisco. I bridge high-caliber visual aesthetics with scalable frontend engineering to build products users love and investors fund.
+                </p>
+              </div>
+
+              <div class="d-flex flex-wrap align-items-center gap-3 pt-3 hero-cta-row">
+                <a href="#portfolio" class="btn-petika-primary">
+                  <span>View Selected Works</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                  </svg>
+                </a>
+                <a href="#contact" class="btn-petika-outline">
+                  <span>Get in Touch</span>
+                </a>
+                <a href="#contact" class="btn-petika-ghost">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span>Download CV (PDF)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Portrait & Socials Card (Col 4) -->
+          <div class="col-lg-4">
+            <div class="bento-card hero-portrait-card">
+              <div class="portrait-img-wrap">
+                <img src="assets/images/avatar/designer-portrait.svg" alt="Petika - Senior Product Designer portrait" class="portrait-img img-dark-theme" width="400" height="480">
+                <img src="assets/images/avatar/designer-portrait-light.svg" alt="Petika - Senior Product Designer portrait" class="portrait-img img-light-theme" width="400" height="480">
+              </div>
+              <div>
+                <h3 class="h4 mb-1">Petika Rostova</h3>
+                <p class="text-secondary-subtle small mb-2">Staff Design Technologist • Ex-FinScale</p>
+                <!-- Quick Social Links Row -->
+                <div class="hero-social-row">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="GitHub Profile">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="LinkedIn Profile">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  </a>
+                  <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="Dribbble Portfolio">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path><path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"></path></svg>
+                  </a>
+                  <a href="https://figma.com" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="Figma Community">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"></path><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"></path><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Metric Card 1 (Col 4) -->
+          <div class="col-md-4">
+            <div class="bento-card metric-card">
+              <div class="metric-number text-accent js-counter" data-target="42" data-prefix="$" data-suffix="M+">$42M+</div>
+              <p class="metric-label">Client Revenue &amp; Capital Raised Across 18 Scale-Ups</p>
+            </div>
+          </div>
+
+          <!-- Hero Metric Card 2 (Col 4) -->
+          <div class="col-md-4">
+            <div class="bento-card metric-card">
+              <div class="metric-number text-accent js-counter" data-target="120" data-suffix="+">120+</div>
+              <p class="metric-label">Engineers &amp; Designers Onboarded to Custom Design Systems</p>
+            </div>
+          </div>
+
+          <!-- Hero Metric Card 3 (Col 4) -->
+          <div class="col-md-4">
+            <div class="bento-card metric-card">
+              <div class="metric-number text-accent js-counter" data-target="99.4" data-decimals="1" data-suffix="%">99.4%</div>
+              <p class="metric-label">On-Time Delivery &amp; 5-Star Client Satisfaction Score</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Section 2: About & Philosophy Bento Module
+         ======================================================================== -->
+    <section id="about" class="section-padding">
+      <div class="container-xxl">
+        
+        <div class="section-header-wrap">
+          <span class="section-eyebrow">The Mindset</span>
+          <h2 class="display-heading">Design is Not Just What It Looks Like. It Is How It Scales.</h2>
+          <p class="section-subtitle">A balanced approach merging rigorous design thinking with frontend performance engineering.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Narrative Bio Card (Col 7) -->
+          <div class="col-lg-7">
+            <div class="bento-card d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h3 mb-3">From Design Systems to Production Code</h3>
+                <p class="text-secondary-subtle">
+                  Over the past 8+ years, I have worked alongside venture-backed founders, engineering vice presidents, and product directors to transform fragmented interfaces into coherent, unified digital design systems.
+                </p>
+                <p class="text-secondary-subtle">
+                  My background spans both ends of the digital spectrum: architecting pixel-precise component systems in Figma, and implementing them directly in clean semantic HTML5, modern CSS custom properties, and performant Vanilla JavaScript. This dual fluency eliminates developer handoff friction and ensures that what is designed is precisely what ships to users.
+                </p>
+              </div>
+
+              <!-- Timezone & Location Status Bar -->
+              <div class="p-3 rounded-3 mt-3" style="background-color: var(--bg-surface-elevated); border: 1px solid var(--border-subtle);">
+                <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-2 small font-mono">
+                  <div>📍 <strong>San Francisco, CA</strong> (PST • UTC-8)</div>
+                  <div class="text-accent">⚡ Avg Response: &lt;4 Hours</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Design Tenets Bento (Col 5) -->
+          <div class="col-lg-5">
+            <div class="d-flex flex-column gap-3 h-100">
+              
+              <div class="bento-card p-4">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <span class="tag-chip">01</span>
+                  <h4 class="h5 mb-0">Systems Over Silos</h4>
+                </div>
+                <p class="small text-secondary-subtle mb-0">
+                  Components engineered for longevity and reuse. Design tokens structured hierarchically to enable instant rebranding.
+                </p>
+              </div>
+
+              <div class="bento-card p-4">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <span class="tag-chip">02</span>
+                  <h4 class="h5 mb-0">Metrics-Driven Elegance</h4>
+                </div>
+                <p class="small text-secondary-subtle mb-0">
+                  Aesthetics that serve a purpose. Every UI pattern is validated against conversion rates, retention, and task completion speed.
+                </p>
+              </div>
+
+              <div class="bento-card p-4">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <span class="tag-chip">03</span>
+                  <h4 class="h5 mb-0">Extreme Performance</h4>
+                </div>
+                <p class="small text-secondary-subtle mb-0">
+                  Zero framework bloat. Sub-second load times, 100% WCAG 2.1 AA accessibility compliance, and silky 60fps animations.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Section 3: Filterable Featured Work & Case Studies
+         ======================================================================== -->
+    <section id="portfolio" class="section-padding">
+      <div class="container-xxl">
+        
+        <div class="section-header-wrap">
+          <span class="section-eyebrow">Selected Works</span>
+          <h2 class="display-heading">Commercial Case Studies &amp; Product Systems</h2>
+          <p class="section-subtitle">A curated index of product designs, enterprise design systems, and web applications. Click any case study for deep challenge/solution breakdown.</p>
+        </div>
+
+        <!-- Category Filter Bar -->
+        <div class="filter-pills-wrap" role="tablist" aria-label="Portfolio Filters">
+          <button type="button" class="filter-pill-btn active" data-filter="all">All Projects (6)</button>
+          <button type="button" class="filter-pill-btn" data-filter="product">Product Design (3)</button>
+          <button type="button" class="filter-pill-btn" data-filter="web">Web Engineering (2)</button>
+          <button type="button" class="filter-pill-btn" data-filter="mobile">Mobile Apps (1)</button>
+          <button type="button" class="filter-pill-btn" data-filter="brand">Brand Systems (1)</button>
+        </div>
+
+        <!-- 6 Bento Project Cards Grid -->
+        <div class="row g-4" id="portfolioGrid">
+          
+          <!-- Project 1: NovaPay (Product Design & Systems) -->
+          <div class="col-lg-6 project-item" data-category="product">
+            <div class="bento-card project-card js-open-project-modal"
+                 data-project-title="NovaPay — Enterprise Fintech Design System"
+                 data-project-category="Product Design &amp; Systems"
+                 data-project-client="FinScale Scale-Up"
+                 data-project-year="2025"
+                 data-project-desc="Unified multi-brand design system powering 8 cross-functional engineering squads, over 450+ production components, and 2.4M monthly active transaction accounts."
+                 data-project-challenge="Inconsistent UI across 14 internal microfrontends caused a 40% slowdown in feature shipping and frequent accessibility violations."
+                 data-project-solution="Engineered an immutable token-first design system with automated Figma-to-code pipelines, WCAG 2.1 AA contrast verification, and comprehensive developer documentation."
+                 data-project-tags="Figma,Design Tokens,Bootstrap 5,WCAG AA,TypeScript"
+                 data-project-metrics="+34% Shipping Velocity:Developer Speed|+450 Components:Standardized:100% WCAG:Pass Rate"
+                 data-project-image="assets/images/projects/project-1-novapay.svg"
+                 data-project-image-light="assets/images/projects/project-1-novapay-light.svg"
+                 data-project-link="https://github.com">
+              
+              <div class="project-preview-wrap">
+                <img src="assets/images/projects/project-1-novapay.svg" alt="NovaPay Fintech Design System preview" class="project-preview-img img-dark-theme" width="600" height="400" loading="lazy">
+                <img src="assets/images/projects/project-1-novapay-light.svg" alt="NovaPay Fintech Design System preview" class="project-preview-img img-light-theme" width="600" height="400" loading="lazy">
+                <span class="project-overlay-badge">FinTech / Design System</span>
+              </div>
+              <div class="project-tags-row">
+                <span class="tag-chip">Product Design</span>
+                <span class="tag-chip">Tokens Studio</span>
+                <span class="tag-chip">+34% Dev Speed</span>
+              </div>
+              <h3 class="project-title">NovaPay — Enterprise Fintech Design System</h3>
+              <p class="project-desc">Complete multi-product design architecture serving 2.4M monthly active users with WCAG 2.1 AA compliance.</p>
+              <div class="project-action-link">
+                <span>Explore Full Case Study</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: AetherCloud (Web Engineering & AI) -->
+          <div class="col-lg-6 project-item" data-category="web">
+            <div class="bento-card project-card js-open-project-modal"
+                 data-project-title="AetherCloud — AI Inference &amp; Telemetry Console"
+                 data-project-client="Aether Labs AI"
+                 data-project-year="2025"
+                 data-project-desc="High-throughput real-time monitoring console displaying GPU cluster health, token latency metrics (TTFT), and interactive model inference playgrounds."
+                 data-project-challenge="Developers struggled to visualize live streaming token generation with complex telemetry data across distributed H100 clusters."
+                 data-project-solution="Designed and built a zero-latency telemetry dashboard with hardware-accelerated SVG charts, multi-language code snippets, and token cost visualizers."
+                 data-project-tags="Vanilla JS,CSS Tokens,WebSockets,SVG Data Viz,Bootstrap 5"
+                 data-project-metrics="14.2ms TTFT:Latency Bench:99.995%:Uptime SLA:42k req/s:Throughput"
+                 data-project-image="assets/images/projects/project-2-aethercloud.svg"
+                 data-project-image-light="assets/images/projects/project-2-aethercloud-light.svg"
+                 data-project-link="https://github.com">
+              
+              <div class="project-preview-wrap">
+                <img src="assets/images/projects/project-2-aethercloud.svg" alt="AetherCloud AI Dashboard preview" class="project-preview-img img-dark-theme" width="600" height="400" loading="lazy">
+                <img src="assets/images/projects/project-2-aethercloud-light.svg" alt="AetherCloud AI Dashboard preview" class="project-preview-img img-light-theme" width="600" height="400" loading="lazy">
+                <span class="project-overlay-badge">AI Platform / Web</span>
+              </div>
+              <div class="project-tags-row">
+                <span class="tag-chip">Web Engineering</span>
+                <span class="tag-chip">Telemetry</span>
+                <span class="tag-chip">Sub-15ms Latency</span>
+              </div>
+              <h3 class="project-title">AetherCloud — AI Inference Telemetry Console</h3>
+              <p class="project-desc">Real-time GPU cluster visualization and live developer code playground built with zero external runtime bloat.</p>
+              <div class="project-action-link">
+                <span>Explore Full Case Study</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: SoundFlow (Mobile Apps) -->
+          <div class="col-lg-4 project-item" data-category="mobile">
+            <div class="bento-card project-card js-open-project-modal"
+                 data-project-title="SoundFlow — Spatial Audio iOS Mobile App"
+                 data-project-client="SoundFlow Technologies"
+                 data-project-year="2024"
+                 data-project-desc="Immersive spatial audio player and ambient generative soundscape application tailored for focus and deep cognitive work."
+                 data-project-challenge="Creating an intuitive tactile UI for complex multi-channel spatial audio positioning without overwhelming casual users."
+                 data-project-solution="Engineered a single-gesture orbital positioning controller with haptic feedback and dynamic harmonic color spectrums."
+                 data-project-tags="iOS UI/UX,SwiftUI,Figma,Spatial Audio,Haptics"
+                 data-project-metrics="4.9 ★:App Store:150k DAU:Active Listeners:+62%:D30 Retention"
+                 data-project-image="assets/images/projects/project-3-soundflow.svg"
+                 data-project-image-light="assets/images/projects/project-3-soundflow-light.svg"
+                 data-project-link="https://github.com">
+              
+              <div class="project-preview-wrap">
+                <img src="assets/images/projects/project-3-soundflow.svg" alt="SoundFlow Spatial Audio Mobile App preview" class="project-preview-img img-dark-theme" width="600" height="400" loading="lazy">
+                <img src="assets/images/projects/project-3-soundflow-light.svg" alt="SoundFlow Spatial Audio Mobile App preview" class="project-preview-img img-light-theme" width="600" height="400" loading="lazy">
+                <span class="project-overlay-badge">Mobile App</span>
+              </div>
+              <div class="project-tags-row">
+                <span class="tag-chip">Mobile Apps</span>
+                <span class="tag-chip">4.9 ★ Rating</span>
+              </div>
+              <h3 class="project-title">SoundFlow — Spatial Audio iOS App</h3>
+              <p class="project-desc">Tactile orbital sound positioning and generative acoustic landscapes loved by 150K daily listeners.</p>
+              <div class="project-action-link">
+                <span>Quick View</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Verde Botanicals (Web & Branding) -->
+          <div class="col-lg-4 project-item" data-category="web brand">
+            <div class="bento-card project-card js-open-project-modal"
+                 data-project-title="Verde Botanicals — Organic E-Commerce Flagship"
+                 data-project-client="Verde Global Brands"
+                 data-project-year="2024"
+                 data-project-desc="Editorial direct-to-consumer lifestyle e-commerce storefront engineered for ultra-fast mobile conversion and sustainable luxury."
+                 data-project-challenge="High mobile bounce rates and checkout friction on legacy Shopify store causing abandoned cart rates above 72%."
+                 data-project-solution="Rebuilt digital storefront with lightweight HTML5/CSS, streamlined 1-page checkout, and sensory editorial product photography."
+                 data-project-tags="E-Commerce,Conversion Rate,Web Performance,Branding"
+                 data-project-metrics="+48.6%:Checkout Conv:0.8s LCP:Page Load Speed:100/100:Mobile Score"
+                 data-project-image="assets/images/projects/project-4-verde.svg"
+                 data-project-image-light="assets/images/projects/project-4-verde-light.svg"
+                 data-project-link="https://github.com">
+              
+              <div class="project-preview-wrap">
+                <img src="assets/images/projects/project-4-verde.svg" alt="Verde Botanicals E-Commerce preview" class="project-preview-img img-dark-theme" width="600" height="400" loading="lazy">
+                <img src="assets/images/projects/project-4-verde-light.svg" alt="Verde Botanicals E-Commerce preview" class="project-preview-img img-light-theme" width="600" height="400" loading="lazy">
+                <span class="project-overlay-badge">E-Commerce</span>
+              </div>
+              <div class="project-tags-row">
+                <span class="tag-chip">Web Engineering</span>
+                <span class="tag-chip">+48% Conversion</span>
+              </div>
+              <h3 class="project-title">Verde Botanicals — Flagship Store</h3>
+              <p class="project-desc">Editorial luxury e-commerce experience with sub-second page loads and a 48% checkout surge.</p>
+              <div class="project-action-link">
+                <span>Quick View</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: CarePulse (Product Design) -->
+          <div class="col-lg-4 project-item" data-category="product">
+            <div class="bento-card project-card js-open-project-modal"
+                 data-project-title="CarePulse — Clinical EHR Data Portal"
+                 data-project-client="CarePulse Health Systems"
+                 data-project-year="2023"
+                 data-project-desc="High-density clinical healthcare workspace designed to streamline doctor-patient documentation and diagnostic tracking."
+                 data-project-challenge="Clinicians spending over 3 hours daily on fragmented EHR data entry, causing doctor burnout and entry errors."
+                 data-project-solution="Created an accessible, keyboard-first electronic health workspace with automated vitals synthesis and zero cognitive clutter."
+                 data-project-tags="Product Design,HealthTech,HIPAA,WCAG AAA,Information Architecture"
+                 data-project-metrics="99.8%:Usability SUS:-42 min:Daily EHR Burden:Zero:Record Errors"
+                 data-project-image="assets/images/projects/project-5-carepulse.svg"
+                 data-project-image-light="assets/images/projects/project-5-carepulse-light.svg"
+                 data-project-link="https://github.com">
+              
+              <div class="project-preview-wrap">
+                <img src="assets/images/projects/project-5-carepulse.svg" alt="CarePulse Healthcare Portal preview" class="project-preview-img img-dark-theme" width="600" height="400" loading="lazy">
+                <img src="assets/images/projects/project-5-carepulse-light.svg" alt="CarePulse Healthcare Portal preview" class="project-preview-img img-light-theme" width="600" height="400" loading="lazy">
+                <span class="project-overlay-badge">HealthTech</span>
+              </div>
+              <div class="project-tags-row">
+                <span class="tag-chip">Product Design</span>
+                <span class="tag-chip">HIPAA Compliant</span>
+              </div>
+              <h3 class="project-title">CarePulse — Clinical Health Portal</h3>
+              <p class="project-desc">Reduced physician documentation load by 42 minutes per day while maintaining zero medical record errors.</p>
+              <div class="project-action-link">
+                <span>Quick View</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Vanguard Studio (Brand Systems) -->
+          <div class="col-lg-12 project-item" data-category="brand">
+            <div class="bento-card project-card js-open-project-modal"
+                 data-project-title="Vanguard Studio — Creative Capital Identity"
+                 data-project-client="Vanguard Venture Partners"
+                 data-project-year="2024"
+                 data-project-desc="Comprehensive brand system and digital presence for a tier-1 Silicon Valley venture fund with $180M under management."
+                 data-project-challenge="Standard corporate venture sites looked interchangeable and failed to attract frontier-tech founders in AI and robotics."
+                 data-project-solution="Designed a Swiss modernist brand identity featuring bold typography, interactive portfolio graphing, and bespoke editorial copywriting."
+                 data-project-tags="Brand Identity,Typography,Art Direction,Web Design,Editorial"
+                 data-project-metrics="Awwwards:Site of the Day:$180M AUM:Fund Capital:42:Co-Investments"
+                 data-project-image="assets/images/projects/project-6-vanguard.svg"
+                 data-project-image-light="assets/images/projects/project-6-vanguard-light.svg"
+                 data-project-link="https://github.com">
+              
+              <div class="row align-items-center g-4">
+                <div class="col-md-6">
+                  <div class="project-preview-wrap mb-3 mb-md-0">
+                    <img src="assets/images/projects/project-6-vanguard.svg" alt="Vanguard Studio Brand Identity preview" class="project-preview-img img-dark-theme" width="600" height="400" loading="lazy">
+                      <img src="assets/images/projects/project-6-vanguard-light.svg" alt="Vanguard Studio Brand Identity preview" class="project-preview-img img-light-theme" width="600" height="400" loading="lazy">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="project-tags-row">
+                    <span class="tag-chip">Brand Systems</span>
+                    <span class="tag-chip">Awwwards SOTD</span>
+                    <span class="tag-chip">$180M AUM</span>
+                  </div>
+                  <h3 class="project-title">Vanguard Studio — Creative Capital Identity</h3>
+                  <p class="project-desc">Awwwards Site of the Day winning digital identity repositioning a Silicon Valley venture fund for frontier founders.</p>
+                  <div class="project-action-link">
+                    <span>Explore Full Case Study</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Section 4: Career Journey & Experience Timeline
+         ======================================================================== -->
+    <section id="experience" class="section-padding">
+      <div class="container-xxl">
+        
+        <div class="section-header-wrap">
+          <span class="section-eyebrow">Career Journey</span>
+          <h2 class="display-heading">Over 8 Years Scaling Products from Seed to Scale</h2>
+          <p class="section-subtitle">Track record leading design systems, managing engineering velocity, and shipping award-winning digital experiences.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="timeline-container">
+              
+              <!-- Role 1 -->
+              <div class="timeline-item">
+                <div class="timeline-beacon" aria-hidden="true"></div>
+                <div class="timeline-card">
+                  <div class="timeline-role-row">
+                    <h3 class="timeline-role-title">Lead Product Designer &amp; Design Engineer</h3>
+                    <span class="timeline-date-chip">2024 — Present</span>
+                  </div>
+                  <div class="timeline-company">FinScale Technologies • San Francisco, CA</div>
+                  <ul class="timeline-achievements">
+                    <li>Architected unified multi-brand design system in Figma and Bootstrap 5 adopted across 8 squads and 450+ components.</li>
+                    <li>Decreased frontend engineering sprint cycle times by 34% through automated token export pipelines.</li>
+                    <li>Spearheaded accessibility audits achieving 100% WCAG 2.1 AA certification across all public client flows.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Role 2 -->
+              <div class="timeline-item">
+                <div class="timeline-beacon" aria-hidden="true"></div>
+                <div class="timeline-card">
+                  <div class="timeline-role-row">
+                    <h3 class="timeline-role-title">Senior UI/UX Designer &amp; Prototyper</h3>
+                    <span class="timeline-date-chip">2022 — 2024</span>
+                  </div>
+                  <div class="timeline-company">Aura Labs AI • Remote</div>
+                  <ul class="timeline-achievements">
+                    <li>Designed AI developer consoles, real-time token streaming terminals, and prompt engineering toolkits.</li>
+                    <li>Constructed interactive high-fidelity prototypes in Vanilla JavaScript and WebSockets for user testing.</li>
+                    <li>Collaborated directly with founding engineers to raise a $14M Series A funding round.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Role 3 -->
+              <div class="timeline-item">
+                <div class="timeline-beacon" aria-hidden="true"></div>
+                <div class="timeline-card">
+                  <div class="timeline-role-row">
+                    <h3 class="timeline-role-title">Product Design Technologist</h3>
+                    <span class="timeline-date-chip">2020 — 2022</span>
+                  </div>
+                  <div class="timeline-company">Hyperion Digital Agency • Seattle, WA</div>
+                  <ul class="timeline-achievements">
+                    <li>Led frontend design development for 14 commercial client web applications using responsive Bootstrap and modern CSS.</li>
+                    <li>Standardized reusable BEM component architecture and automated Lighthouse CI performance budgets.</li>
+                    <li>Won 2 Awwwards Honors and 1 CSS Design Award for interactive brand experiences.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Role 4 -->
+              <div class="timeline-item">
+                <div class="timeline-beacon" aria-hidden="true"></div>
+                <div class="timeline-card">
+                  <div class="timeline-role-row">
+                    <h3 class="timeline-role-title">UI Designer &amp; Frontend Apprentice</h3>
+                    <span class="timeline-date-chip">2018 — 2020</span>
+                  </div>
+                  <div class="timeline-company">Vanguard Creative Agency • New York, NY</div>
+                  <ul class="timeline-achievements">
+                    <li>Crafted marketing landing pages, wireframes, and vector icon libraries for emerging tech startups.</li>
+                    <li>Implemented responsive HTML5/CSS3 layouts with cross-browser compatibility across Chrome, Safari, and Firefox.</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Section 5: Skills, Tools & Stack Bento
+         ======================================================================== -->
+    <section id="skills" class="section-padding">
+      <div class="container-xxl">
+        
+        <div class="section-header-wrap">
+          <span class="section-eyebrow">Competencies</span>
+          <h2 class="display-heading">Core Skills &amp; Battle-Tested Tooling</h2>
+          <p class="section-subtitle">A balanced repertoire spanning human-centered design strategy and clean frontend engineering.</p>
+        </div>
+
+        <div class="row g-4">
+          
+          <!-- Column 1: Product Design -->
+          <div class="col-lg-4">
+            <div class="bento-card">
+              <h3 class="skill-category-title">
+                <span>🎨</span>
+                <span>Product Design</span>
+              </h3>
+              <div class="skill-chips-cloud">
+                <span class="skill-chip">Design Systems</span>
+                <span class="skill-chip">Tokens Studio</span>
+                <span class="skill-chip">User Research</span>
+                <span class="skill-chip">Wireframing</span>
+                <span class="skill-chip">Rapid Prototyping</span>
+                <span class="skill-chip">WCAG 2.1 AA</span>
+                <span class="skill-chip">Usability Auditing</span>
+                <span class="skill-chip">Information Arch</span>
+                <span class="skill-chip">Micro-Interactions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Frontend Engineering -->
+          <div class="col-lg-4">
+            <div class="bento-card">
+              <h3 class="skill-category-title">
+                <span>💻</span>
+                <span>Frontend Engineering</span>
+              </h3>
+              <div class="skill-chips-cloud">
+                <span class="skill-chip">Semantic HTML5</span>
+                <span class="skill-chip">CSS3 &amp; CSS Grid</span>
+                <span class="skill-chip">Bootstrap 5.3+</span>
+                <span class="skill-chip">Vanilla JS (ES6+)</span>
+                <span class="skill-chip">CSS Variables</span>
+                <span class="skill-chip">Responsive Reflow</span>
+                <span class="skill-chip">Core Web Vitals</span>
+                <span class="skill-chip">SVG Animations</span>
+                <span class="skill-chip">Git &amp; GitHub</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Workflows & Tooling -->
+          <div class="col-lg-4">
+            <div class="bento-card">
+              <h3 class="skill-category-title">
+                <span>⚡</span>
+                <span>Tools &amp; Workflows</span>
+              </h3>
+              <div class="skill-chips-cloud">
+                <span class="skill-chip">Figma &amp; FigJam</span>
+                <span class="skill-chip">Adobe CC</span>
+                <span class="skill-chip">VS Code</span>
+                <span class="skill-chip">Chrome DevTools</span>
+                <span class="skill-chip">Vercel &amp; Netlify</span>
+                <span class="skill-chip">Linear &amp; Notion</span>
+                <span class="skill-chip">Zero-Dependency</span>
+                <span class="skill-chip">W3C Validation</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Section 6: Client Testimonials & Social Proof
+         ======================================================================== -->
+    <section id="testimonials" class="section-padding">
+      <div class="container-xxl">
+        
+        <div class="section-header-wrap">
+          <span class="section-eyebrow">Endorsements</span>
+          <h2 class="display-heading">What Founders &amp; Engineering Leads Say</h2>
+          <p class="section-subtitle">Real feedback from clients, directors, and collaborators across fintech, AI, and consumer tech.</p>
+        </div>
+
+        <div class="row g-4">
+          
+          <div class="col-lg-4">
+            <div class="bento-card testimonial-card">
+              <div>
+                <div class="testimonial-stars" aria-label="5 stars out of 5">★★★★★</div>
+                <p class="testimonial-quote">
+                  "Petika completely transformed our core dashboard. The speed of execution and attention to micro-interactions was world-class. Our user retention jumped 28% within 60 days of release."
+                </p>
+              </div>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar" aria-hidden="true">DK</div>
+                <div>
+                  <h4 class="author-name">David Kowalski</h4>
+                  <p class="author-title">VP of Product • FinScale</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="bento-card testimonial-card">
+              <div>
+                <div class="testimonial-stars" aria-label="5 stars out of 5">★★★★★</div>
+                <p class="testimonial-quote">
+                  "Rarely do you find someone who understands both the nuance of high-end typography and the reality of frontend performance. Petika is a 10x design engineer who elevates everyone around her."
+                </p>
+              </div>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar" aria-hidden="true">SL</div>
+                <div>
+                  <h4 class="author-name">Sarah Lin</h4>
+                  <p class="author-title">Founder &amp; CEO • Aether Labs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="bento-card testimonial-card">
+              <div>
+                <div class="testimonial-stars" aria-label="5 stars out of 5">★★★★★</div>
+                <p class="testimonial-quote">
+                  "The design system Petika architected for our agency saved us hundreds of engineering hours. The code was so clean our frontend developers literally applauded during the demo."
+                </p>
+              </div>
+              <div class="testimonial-author-row">
+                <div class="testimonial-avatar" aria-hidden="true">MT</div>
+                <div>
+                  <h4 class="author-name">Marcus Thorne</h4>
+                  <p class="author-title">Head of Design • Hyperion Studio</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Section 7: Interactive Contact & Booking Hub
+         ======================================================================== -->
+    <section id="contact" class="section-padding">
+      <div class="container-xxl">
+        
+        <div class="section-header-wrap">
+          <span class="section-eyebrow">Get in Touch</span>
+          <h2 class="display-heading">Let's Build Something Exceptional Together</h2>
+          <p class="section-subtitle">Have an upcoming design system initiative, product launch, or advisory project in mind? Reach out directly or submit your project details below.</p>
+        </div>
+
+        <div class="row g-4">
+          
+          <!-- Left Column: Direct Contact & Availability Bento -->
+          <div class="col-lg-5">
+            <div class="bento-card d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h4 mb-3">Direct Channels</h3>
+                <p class="text-secondary-subtle small mb-4">Click any pill below to copy information directly to your clipboard.</p>
+
+                <!-- 1-Click Copy Pill: Email -->
+                <div class="contact-pill-card js-copy-pill" data-copy="hello@petika.design" role="button" tabindex="0" aria-label="Copy Email Address">
+                  <div class="contact-pill-info">
+                    <span class="fs-5">✉️</span>
+                    <div>
+                      <span class="contact-pill-label">Email Address</span>
+                      <span class="contact-pill-value">hello@petika.design</span>
+                    </div>
+                  </div>
+                  <span class="contact-copy-badge">Copy</span>
+                </div>
+
+                <!-- 1-Click Copy Pill: Phone -->
+                <div class="contact-pill-card js-copy-pill" data-copy="+1 (415) 890-4321" role="button" tabindex="0" aria-label="Copy Phone Number">
+                  <div class="contact-pill-info">
+                    <span class="fs-5">📞</span>
+                    <div>
+                      <span class="contact-pill-label">Direct Phone</span>
+                      <span class="contact-pill-value">+1 (415) 890-4321</span>
+                    </div>
+                  </div>
+                  <span class="contact-copy-badge">Copy</span>
+                </div>
+
+                <!-- 1-Click Copy Pill: Location -->
+                <div class="contact-pill-card js-copy-pill" data-copy="San Francisco, California, USA" role="button" tabindex="0" aria-label="Copy Location">
+                  <div class="contact-pill-info">
+                    <span class="fs-5">📍</span>
+                    <div>
+                      <span class="contact-pill-label">Location / Timezone</span>
+                      <span class="contact-pill-value">San Francisco, CA (PST)</span>
+                    </div>
+                  </div>
+                  <span class="contact-copy-badge">Copy</span>
+                </div>
+              </div>
+
+              <div class="pt-4 border-top border-secondary border-opacity-10 mt-3">
+                <div class="d-flex align-items-center gap-2 text-accent small font-mono">
+                  <span class="beacon-dot" aria-hidden="true"></span>
+                  <span>Currently accepting Q1/Q2 engagements</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Validated Contact Form -->
+          <div class="col-lg-7">
+            <div class="bento-card">
+              <h3 class="h4 mb-3">Send a Project Inquiry</h3>
+              <p class="text-secondary-subtle small mb-4">Fill out the fields below and I will reply with initial scope notes within 4 hours.</p>
+
+              <form id="contactForm" novalidate>
+                <!-- Honeypot Field for Spam Protection -->
+                <input type="text" name="website" id="formHoneypot" class="petika-hp" tabindex="-1" autocomplete="off">
+
+                <div class="row g-3">
+                  <div class="col-md-6 petika-form-group">
+                    <label for="contactName" class="petika-label">Your Name <span class="text-accent">*</span></label>
+                    <input type="text" id="contactName" class="petika-input" placeholder="e.g. Alex Morgan" required>
+                    <div class="petika-invalid-feedback">Please enter your name.</div>
+                  </div>
+
+                  <div class="col-md-6 petika-form-group">
+                    <label for="contactEmail" class="petika-label">Email Address <span class="text-accent">*</span></label>
+                    <input type="email" id="contactEmail" class="petika-input" placeholder="alex@company.com" required>
+                    <div class="petika-invalid-feedback">Please provide a valid email address.</div>
+                  </div>
+
+                  <div class="col-12 petika-form-group">
+                    <label for="contactBudget" class="petika-label">Project Scope &amp; Budget Tier</label>
+                    <select id="contactBudget" class="petika-select">
+                      <option value="5k-10k">$5,000 — $10,000 (UI/UX Audit &amp; Prototype)</option>
+                      <option value="10k-25k" selected>$10,000 — $25,000 (Complete Design System or MVP)</option>
+                      <option value="25k-50k">$25,000 — $50,000 (Full-Scale Web/Mobile Product)</option>
+                      <option value="50k+">$50,000+ (Enterprise Retainer / Multi-Platform)</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12 petika-form-group">
+                    <label for="contactMessage" class="petika-label">Project Overview <span class="text-accent">*</span></label>
+                    <textarea id="contactMessage" class="petika-textarea" rows="4" placeholder="Tell me about your product, timeline, and what you aim to achieve..." minlength="15" required></textarea>
+                    <div class="petika-invalid-feedback">Please enter at least 15 characters describing your project.</div>
+                  </div>
+
+                  <div class="col-12 pt-2">
+                    <button type="submit" id="contactSubmitBtn" class="btn-petika-primary w-100 justify-content-center py-3">
+                      <span>Send Project Inquiry</span>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Simulated Feedback Alert -->
+                <div id="contactAlert" class="contact-alert-banner" role="alert"></div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       Interactive Case Study Modal Dialog
+       ========================================================================== -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="modalProjectTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content petika-modal">
+        
+        <div class="modal-header">
+          <div>
+            <span id="modalProjectCategory" class="tag-chip mb-2 d-inline-block">Product Design</span>
+            <h3 class="modal-title h4 mb-0" id="modalProjectTitle">Project Title</h3>
+          </div>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <!-- Hero Mockup Display -->
+          <div class="modal-case-hero">
+            <img id="modalProjectHeroImg" src="assets/images/projects/project-1-novapay.svg" alt="Case study preview screenshot" class="img-dark-theme" width="600" height="400">
+            <img id="modalProjectHeroImgLight" src="assets/images/projects/project-1-novapay-light.svg" alt="Case study preview screenshot" class="img-light-theme" width="600" height="400">
+          </div>
+
+          <!-- Client & Year Bar -->
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 small font-mono mb-4 text-secondary-subtle">
+            <div>Client: <strong id="modalProjectClient" class="text-body">FinScale</strong></div>
+            <div>Year: <strong id="modalProjectYear" class="text-body">2025</strong></div>
+          </div>
+
+          <!-- Narrative Overview -->
+          <p id="modalProjectDesc" class="fs-6 mb-4 text-secondary-subtle">Detailed description of the project and impact.</p>
+
+          <!-- Challenge vs Solution 2-Column Grid -->
+          <div class="modal-compare-grid">
+            <div class="compare-box">
+              <h4 class="compare-box-title text-accent">The Challenge</h4>
+              <p id="modalProjectChallenge" class="small mb-0 text-secondary-subtle">Bottlenecks and user problems encountered.</p>
+            </div>
+            <div class="compare-box">
+              <h4 class="compare-box-title" style="color: var(--emerald-500);">The Strategic Solution</h4>
+              <p id="modalProjectSolution" class="small mb-0 text-secondary-subtle">Design architecture and engineering resolution.</p>
+            </div>
+          </div>
+
+          <!-- Tech Stack Badges -->
+          <div>
+            <div class="small text-secondary-subtle mb-2 font-mono">TECHNOLOGY &amp; TOOLING:</div>
+            <div class="d-flex flex-wrap gap-2" id="modalProjectTags">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <a href="#" id="modalProjectLiveBtn" target="_blank" rel="noopener noreferrer" class="btn-petika-primary">
+            <span>Visit Live Demo</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+          <button type="button" class="btn-petika-outline" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Global Minimalist Footer
+       ========================================================================== -->
+  <footer class="petika-footer">
+    <div class="container-xxl">
+      <div class="footer-inner">
+        
+        <p class="footer-copy">
+          &copy; 2026 <strong>Petika</strong>. Crafted with Precision &amp; Bootstrap 5.3. All rights reserved.
+        </p>
+
+        <ul class="footer-links">
+          <li><a href="#hero" class="footer-link">Home</a></li>
+          <li><a href="#portfolio" class="footer-link">Work</a></li>
+          <li><a href="#contact" class="footer-link">Contact</a></li>
+          <li><a href="404.html" class="footer-link">404 Page</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button type="button" class="back-to-top-btn js-back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Core JavaScript Libraries -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

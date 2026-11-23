@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 38" fill="none">
+  <!-- Petika Monogram Logo - Light Theme -->
+  <g id="logo-mark">
+    <rect x="2" y="4" width="30" height="30" rx="8" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1.5"/>
+    <path d="M11 12H19C22.3137 12 25 14.6863 25 18C25 21.3137 22.3137 24 19 24H15V28H11V12Z" fill="#0F172A"/>
+    <circle cx="19" cy="18" r="3" fill="#D97706"/>
+  </g>
+  <text x="42" y="26" font-family="'Syne', 'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" letter-spacing="0.06em" fill="#0F172A">
+    PETIKA<tspan fill="#D97706">.</tspan>
+  </text>
+</svg>

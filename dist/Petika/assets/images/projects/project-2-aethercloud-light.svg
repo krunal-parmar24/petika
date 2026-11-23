@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <!-- Light Theme Variant: AetherCloud AI Dashboard -->
+  <defs>
+    <linearGradient id="p2bgLight" x1="0" y1="0" x2="600" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E0F2FE"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#p2bgLight)"/>
+  <rect x="40" y="30" width="520" height="340" rx="12" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5"/>
+  <rect x="40" y="30" width="520" height="40" rx="12" fill="#F0F9FF"/>
+  <circle cx="65" cy="50" r="5" fill="#EF4444"/>
+  <circle cx="82" cy="50" r="5" fill="#F59E0B"/>
+  <circle cx="99" cy="50" r="5" fill="#10B981"/>
+  <text x="125" y="55" font-family="'JetBrains Mono', monospace" font-size="12" fill="#0284C7">aether-cloud.ai / telemetry-console</text>
+
+  <!-- Live Telemetry Visualizer -->
+  <rect x="65" y="90" width="470" height="110" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="85" y="120" font-family="'Inter', sans-serif" font-size="12" fill="#64748B">GLOBAL INFERENCE THROUGHPUT</text>
+  <text x="85" y="160" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="28" fill="#0F172A">14.2ms <tspan font-size="14" fill="#0284C7">TTFT</tspan></text>
+  <text x="320" y="160" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="18" fill="#047857">● 99.995% Uptime</text>
+
+  <!-- Dual Dashboard Bento Blocks -->
+  <rect x="65" y="215" width="225" height="135" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="85" y="245" font-family="'Inter', sans-serif" font-size="11" fill="#64748B">ACTIVE GPU CLUSTERS</text>
+  <text x="85" y="275" font-family="'Syne', sans-serif" font-weight="700" font-size="22" fill="#0F172A">256x H100 SXM</text>
+  <rect x="85" y="295" width="185" height="8" rx="4" fill="#E2E8F0"/>
+  <rect x="85" y="295" width="150" height="8" rx="4" fill="#0284C7"/>
+  <text x="85" y="325" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0284C7">82% Cluster Load</text>
+
+  <rect x="310" y="215" width="225" height="135" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="330" y="245" font-family="'Inter', sans-serif" font-size="11" fill="#64748B">API CALLS / SECOND</text>
+  <text x="330" y="275" font-family="'Syne', sans-serif" font-weight="700" font-size="22" fill="#0F172A">42,850 req/s</text>
+  <text x="330" y="315" font-family="'Inter', sans-serif" font-size="11" fill="#047857">Zero Data Retention SLA</text>
+</svg>

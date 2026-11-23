@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" fill="none">
+  <defs>
+    <linearGradient id="p6bg" x1="0" y1="0" x2="600" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#261E16"/>
+      <stop offset="100%" stop-color="#0A0D14"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#p6bg)"/>
+  
+  <!-- Outer Window Container -->
+  <rect x="35" y="25" width="530" height="350" rx="14" fill="#0A0D14" stroke="rgba(245, 158, 11, 0.3)" stroke-width="1.5"/>
+  <rect x="35" y="25" width="530" height="42" rx="14" fill="#111726"/>
+  <circle cx="60" cy="46" r="5" fill="#EF4444"/>
+  <circle cx="76" cy="46" r="5" fill="#F59E0B"/>
+  <circle cx="92" cy="46" r="5" fill="#10B981"/>
+  <text x="115" y="51" font-family="'JetBrains Mono', monospace" font-size="12" fill="#F59E0B">vanguard-studio.capital / brand-identity</text>
+
+  <!-- Typographic Art Direction -->
+  <g transform="translate(60, 95)">
+    <text x="0" y="45" font-family="'Syne', sans-serif" font-weight="800" font-size="46" fill="#F8FAFC" letter-spacing="-0.03em">VANGUARD</text>
+    <text x="0" y="75" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#94A3B8" letter-spacing="0.2em">EARLY STAGE CAPITAL &amp; ADVISORY</text>
+    <line x1="0" y1="95" x2="480" y2="95" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+    
+    <!-- Award Card 1: Awwwards -->
+    <rect x="0" y="115" width="145" height="95" rx="10" fill="#111726" stroke="rgba(255, 255, 255, 0.08)"/>
+    <text x="16" y="142" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#94A3B8" letter-spacing="0.05em">AWWWARDS</text>
+    <text x="16" y="170" font-family="'Syne', sans-serif" font-weight="700" font-size="15" fill="#F59E0B">Site of the Day</text>
+    <text x="16" y="192" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Score 8.42/10</text>
+
+    <!-- Award Card 2: CSS Design Awards -->
+    <rect x="165" y="115" width="145" height="95" rx="10" fill="#111726" stroke="rgba(255, 255, 255, 0.08)"/>
+    <text x="181" y="142" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#94A3B8" letter-spacing="0.05em">CSS DESIGN AWARDS</text>
+    <text x="181" y="170" font-family="'Syne', sans-serif" font-weight="700" font-size="15" fill="#F8FAFC">Special Kudos</text>
+    <text x="181" y="192" font-family="'Inter', sans-serif" font-size="11" fill="#10B981">Best UI / UX</text>
+
+    <!-- Stat Card 3: Portfolio Fund -->
+    <rect x="330" y="115" width="150" height="95" rx="10" fill="#111726" stroke="rgba(245, 158, 11, 0.25)"/>
+    <text x="346" y="142" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#F59E0B" letter-spacing="0.05em">PORTFOLIO FUND</text>
+    <text x="346" y="170" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="16" fill="#F8FAFC">$180M AUM</text>
+    <text x="346" y="192" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">42 Co-Investments</text>
+  </g>
+</svg>

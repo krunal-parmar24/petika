@@ -1,0 +1,49 @@
+================================================================================
+PETIKA — THIRD-PARTY LICENSES & CREDITS
+================================================================================
+
+All third-party fonts, libraries, and icon assets utilized in Petika are 100% 
+free and legal for commercial redistribution under permissive open-source licenses.
+
+1. WEB FONTS
+------------
+- Syne
+  Author: Lucas Le Bihan / Bonjour Monde
+  License: SIL Open Font License, 1.1 (OFL)
+  Source: https://fonts.google.com/specimen/Syne
+
+- Inter
+  Author: Rasmus Andersson
+  License: SIL Open Font License, 1.1 (OFL)
+  Source: https://fonts.google.com/specimen/Inter
+
+- JetBrains Mono
+  Author: JetBrains
+  License: Apache License 2.0 / SIL Open Font License
+  Source: https://fonts.google.com/specimen/JetBrains+Mono
+
+2. CSS & JAVASCRIPT FRAMEWORKS
+------------------------------
+- Bootstrap 5 (v5.3.3)
+  Author: The Bootstrap Authors & Twitter, Inc.
+  License: MIT License
+  Source: https://getbootstrap.com
+
+3. ICONS & VECTOR GRAPHICS
+--------------------------
+- Bootstrap Icons & Feather Vector Paths
+  Author: The Bootstrap Authors / Feather Team
+  License: MIT License
+  Source: https://icons.getbootstrap.com
+
+- Bespoke Vector Showcase Graphics & Logos
+  Author: KD Themes
+  License: Included under Petika Commercial Template License
+
+4. DEMO PHOTOGRAPHY / AVATARS
+-----------------------------
+- Unsplash & Generated Vector Design Imagery
+  License: Unsplash License (Free commercial use) / KD Themes Vector Art
+  Source: https://unsplash.com/license
+
+All licenses remain the intellectual property of their respective creators.

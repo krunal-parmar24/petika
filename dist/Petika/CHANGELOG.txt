@@ -1,0 +1,32 @@
+================================================================================
+PETIKA — CHANGELOG
+================================================================================
+
+Version 1.0.0 (2026-11-23) — Initial Commercial Release
+--------------------------------------------------------------------------------
+- INITIAL RELEASE: Commercial distribution package for ThemeForest, UI8, and Creative Market.
+- CORE ARCHITECTURE:
+  * Bootstrap 5.3.3 local minified integration.
+  * 100% Vanilla JavaScript (ES6+) — zero jQuery runtime dependencies.
+  * 3-tier CSS custom property token system for 60-second color rebranding.
+- THEME ENGINE:
+  * Dual theme system: Dark Mode (Obsidian & Radiant Amber) and Light Mode (Alabaster Gallery & Amber Bronze).
+  * Pre-render inline script in <head> guaranteeing zero Flash-Of-Unstyled-Theme (FOUT).
+  * User theme preference persistence via localStorage with prefers-color-scheme fallback.
+- SECTIONS & COMPONENTS:
+  * Sticky glassmorphism header with active scroll-spy and pulsating availability beacon.
+  * Bento Hero Grid with 3 live animated metric counters and portrait card.
+  * About & Philosophy bento module with 3 core tenets and local timezone status bar.
+  * Filterable Portfolio Showcase with 6 bento case study cards.
+  * Interactive Project Case Study Modal displaying problem overview, challenge vs solution, metrics bar, and tech chips.
+  * Career Journey interactive timeline with company credentials and achievements.
+  * Skills & Competencies 3-pillar bento grid (Design, Frontend, Tools).
+  * Client Testimonials cards with 5-star ratings and verified client badges.
+  * Interactive Contact Hub with 1-click clipboard copy pills and client-side validated form with honeypot anti-spam.
+  * Minimalist footer with back-to-top floating button.
+  * Custom 404 error page.
+- QUALITY & COMPLIANCE:
+  * 100% W3C HTML5 Validated markup.
+  * WCAG 2.1 AA Contrast and Keyboard Accessibility verified.
+  * Audited across 6 viewports (375px to 1920px) with 0px horizontal overflow.
+  * Standalone in-browser HTML documentation manual included.

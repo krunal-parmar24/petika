@@ -1,0 +1,33 @@
+================================================================================
+PETIKA — COMMERCIAL END USER LICENSE AGREEMENT
+================================================================================
+
+This template is licensed by KD Themes under standard digital marketplace commercial terms 
+(applicable to purchases made on ThemeForest / Envato Market, UI8, or Creative Market).
+
+1. REGULAR LICENSE GRANT
+------------------------
+The Regular License grants you, the purchaser, an ongoing, non-exclusive, worldwide 
+license to make use of the digital work (Petika) to create one single End Product 
+for yourself or for one client (a "personal or commercial website").
+
+You CAN:
+- Create one commercial or personal single-page portfolio or website.
+- Modify, rebrand, customize colors, typography, layout, and content.
+- Host the resulting website on any public or private web server.
+
+You CANNOT:
+- Re-distribute, resell, sublicense, or share the source HTML/CSS/JS files, either 
+  in whole or in part, as a template or digital stock item on any marketplace.
+- Include the source template files within an open-source public repository 
+  without prior written permission from KD Themes.
+
+2. EXTENDED LICENSE GRANT
+-------------------------
+An Extended License allows you to use the template in an End Product that may be sold 
+or licensed to multiple end users (e.g. incorporated into a SaaS portfolio builder).
+
+For licensing inquiries or commercial multi-seat permissions, please contact:
+licensing@kdthemes.com
+
+Copyright (C) 2026 KD Themes. All rights reserved.

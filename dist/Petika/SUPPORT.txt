@@ -1,0 +1,38 @@
+================================================================================
+PETIKA — CUSTOMER SUPPORT & ASSISTANCE POLICY
+================================================================================
+
+Dear Buyer,
+
+Thank you for choosing Petika! We take immense pride in crafting commercial-grade, 
+ultra-clean HTML5 templates that make customization fast, pleasant, and seamless.
+
+SUPPORT CHANNELS & ASSISTANCE
+=============================
+- Documentation: Please review the included "documentation/index.html" manual first, 
+  which answers 95% of customization questions.
+- Support Email: support@kdthemes.com
+- Response Time: Typically within 12 to 24 business hours (Monday – Friday, UTC).
+
+WHAT IS COVERED UNDER TEMPLATE SUPPORT:
+=======================================
+✓ Assistance with reported bugs or layout inconsistencies in the original codebase.
+✓ Clarification regarding template features, CSS variables, and documentation.
+✓ Guidance on third-party plugin integration as documented in the manual.
+✓ Updates and bug fixes for browser compatibility or Bootstrap updates.
+
+WHAT IS NOT COVERED:
+====================
+✗ Extensive custom design overhaul or bespoke feature development.
+✗ Third-party backend server-side scripts (PHP, Node.js mailers, database APIs).
+✗ Hosting, DNS, or server configuration support.
+✗ Issues arising from major modifications to core Bootstrap files.
+
+NEED CUSTOM DESIGN OR ADVANCED DEVELOPMENT?
+===========================================
+If you require custom feature additions, backend API integrations, or full 
+turnkey deployment, our engineering team is available for bespoke consulting.
+Contact: studio@kdthemes.com
+
+Happy building!
+— The KD Themes Engineering Team
