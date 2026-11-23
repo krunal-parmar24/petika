@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initStickyHeader();
   initScrollSpy();
+  initMobileNav();
   initPortfolioFilter();
   initProjectModal();
   initContactForm();
@@ -84,7 +85,7 @@ function initStickyHeader() {
    ========================================================================== */
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.petika-nav-link');
+  const navLinks = document.querySelectorAll('.petika-nav-link, #mobileNavDrawer .nav-link');
   if (!sections.length || !navLinks.length) return;
 
   const observerOptions = {
@@ -109,6 +110,49 @@ function initScrollSpy() {
   }, observerOptions);
 
   sections.forEach(section => observer.observe(section));
+}
+
+/* ==========================================================================
+   4. Mobile Offcanvas Navigation Smooth Scroll & Auto-Close
+   ========================================================================== */
+function initMobileNav() {
+  const drawerEl = document.getElementById('mobileNavDrawer');
+  if (!drawerEl) return;
+
+  const mobileNavLinks = drawerEl.querySelectorAll('a[href^="#"]');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+
+      const targetEl = document.querySelector(targetId);
+      if (!targetEl) return;
+
+      e.preventDefault();
+
+      let scrolled = false;
+      const scrollToTarget = () => {
+        if (scrolled) return;
+        scrolled = true;
+        targetEl.scrollIntoView({ behavior: 'smooth' });
+        if (history.pushState) {
+          history.pushState(null, '', targetId);
+        } else {
+          window.location.hash = targetId;
+        }
+      };
+
+      const bsOffcanvas = typeof bootstrap !== 'undefined' && bootstrap.Offcanvas ? bootstrap.Offcanvas.getInstance(drawerEl) : null;
+      if (bsOffcanvas) {
+        drawerEl.addEventListener('hidden.bs.offcanvas', scrollToTarget, { once: true });
+        // Fallback in case transition event doesn't fire
+        setTimeout(scrollToTarget, 350);
+        bsOffcanvas.hide();
+      } else {
+        scrollToTarget();
+      }
+    });
+  });
 }
 
 /* ==========================================================================
